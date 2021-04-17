@@ -157,3 +157,8 @@ if x<y:
 else:
     small=y if y<z else z
 print(small)    
+
+member=['小童','小小童','童','小童最棒']
+for i in member:
+    print(i,len(i))
+

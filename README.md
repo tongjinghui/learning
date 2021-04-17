@@ -162,3 +162,29 @@ member=['小童','小小童','童','小童最棒']
 for i in member:
     print(i,len(i))
 
+作业009：
+0. 设计一个验证用户密码程序，用户只有三次机会输入错误，不过如果用户输入的内容中包含"*"则不计算在内。
+code='小童最棒'
+a=input('请输入密码:')
+t=3
+while 1:
+       
+    if (a == code)and (t>0): 
+          print('密码正确，正在进入程序......')
+          break
+    elif '*'in a:
+         b=str(t)
+         print('密码中不能含有“*”号!您还有'+b+'次机会！')
+         a=input('请输入密码:')    
+    
+    else:
+           if t>1:
+            print('密码错误！',end='')
+            t=t-1
+            c=str(t)
+            print('您还有'+c+'次机会！')
+            a=input('请输入密码:')
+           else:
+
+             print('密码错误，您没机会了！')
+             break 

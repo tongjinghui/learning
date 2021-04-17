@@ -83,4 +83,21 @@ while (1):
             break
 
 
+1. 写一个程序，判断给定年份是否为闰年。
+
+year=input('请输入一个年份：')
+while not year.isdigit():
+    temp = input("抱歉，您的输入有误，请输入一个整数：")
+year=int(year)    
+if  year%400==0:
+    year=str(year)
+    print(year+'是闰年')
+else :
+    if  (year%4==0)and(year%100!=0):
+        year=str(year)
+        print(year+'是闰年')
+    else:
+        year=str(year) 
+        print(year+'不是闰年')
+    
 

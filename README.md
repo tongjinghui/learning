@@ -100,4 +100,16 @@ else :
         year=str(year) 
         print(year+'不是闰年')
     
+0. 请写一个程序打印出 0~100 所有的奇数。
+num=0
+while num<101:
+      if num % 2==0:
+          
+         print(num)
+         num=num+1
+      else:
+          num=num+1
+    
+
+
 

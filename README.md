@@ -118,3 +118,11 @@ while temp < (num+1):
       print(result)
       temp=temp+1
 
+
+2.爱因斯坦曾出过这样一道有趣的数学题：有一个长阶梯，若每步上2阶，最后剩1阶；若每步上3阶，最后剩2阶；若每步上5阶，最后剩4阶；若每步上6阶，最后剩5阶；只有每步上7阶，最后刚好一阶也不剩。
+temp=0
+while (temp < 10000):
+       temp=temp+1
+       if  (temp%2==1)& (temp%3 ==2 )&(temp%5==4)&(temp%6==5)&(temp%7==0):
+           print(temp)
+

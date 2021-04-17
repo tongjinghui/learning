@@ -42,6 +42,7 @@ while temp:
       temp=temp-1
 
 20210417
+作业005：
 改进版猜数字小游戏2.0
 
 import random
@@ -99,7 +100,8 @@ else :
     else:
         year=str(year) 
         print(year+'不是闰年')
-    
+
+作业006：
 0. 请写一个程序打印出 0~100 所有的奇数。
 num=0
 while num<101:
@@ -127,3 +129,4 @@ while (temp < 10000):
        if  (temp%2==1)& (temp%3 ==2 )&(temp%5==4)&(temp%6==5)&(temp%7==0):
            print(temp)
 
+作业007,008

@@ -110,6 +110,11 @@ while num<101:
       else:
           num=num+1
     
-
-
+1.计算2的多少次方
+num=int(input('想计算2的多少次方？请输入：'))
+temp=1
+while temp < (num+1):
+      result=2**temp
+      print(result)
+      temp=temp+1
 

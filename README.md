@@ -41,8 +41,46 @@ while temp:
       print(' '*temp+'*'*temp)
       temp=temp-1
 
+20210417
+改进版猜数字小游戏2.0
 
+import random
+secret=random.randint (1,100)
+print('............改进版猜数字小游戏2.0............')
+times=int(input('你想猜几次？'))
+guess=int(input('猜猜小童现在在想哪个数字（1—100）：'))
+t=times
 
+while (1):
+        
+        if guess>secret:
+           print('猜大了喔')
+           t = t-1
+           if t>0:
+               guess=int(input('再猜一次吧：'))
+           else:
+               b=str(times)
+               c=str(secret)
+               print(b+'次机会用完了，游戏结束')
+               print('很遗憾你没有猜中，小童心里想的是'+c+'喔\n下次记得多给自己一些机会吧!')
+               break
+        elif guess<secret: 
+             print('猜小了喔')
+             
+             t=t-1
+             if t>0:
+               guess=int(input('再猜一次吧：'))
+             else:
+               d=str(times)
+               e=str(secret)
+               print(d+'次机会用完了，游戏结束')
+               print('很遗憾你没有猜中，小童心里想的是'+e+'喔\n下次记得多给自己一些机会吧!')
+               break
+        else :
+            a=str(times - t+1)
+            f=str(secret)
+            print('真棒,你猜对了！小童心里想的就是'+f+'喔，你一共猜了'+a+'次！')
+            break
 
 
 

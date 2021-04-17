@@ -188,3 +188,17 @@ while 1:
 
              print('密码错误，您没机会了！')
              break 
+             
+1. 编写一个程序，求 100~999 之间的所有水仙花数。
+num=100
+while num<1000:
+    a=num%10
+    b=num//10
+    c=b%10
+    d=b//10
+    if num==(a**3+c**3+d**3):
+        print(num)
+    num=num+1
+    
+    
+

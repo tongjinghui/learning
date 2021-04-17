@@ -147,4 +147,13 @@ while 1:
     else:
         print('输入的数值不在范围内！')
         
-        
+1.用三目操作符输出x,y,z中的最小值  
+      
+x=int(input('请为x赋值：'))
+y=int(input('请为y赋值：'))
+z=int(input('请为z赋值：'))
+if x<y:
+    small=x if x<z else z
+else:
+    small=y if y<z else z
+print(small)    

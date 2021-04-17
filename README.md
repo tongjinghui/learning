@@ -81,14 +81,14 @@ while (1):
             a=str(times - t+1)
             f=str(secret)
             print('真棒,你猜对了！小童心里想的就是'+f+'喔，你一共猜了'+a+'次！')
-            break
+            shuru
 
 
 1. 写一个程序，判断给定年份是否为闰年。
 
 year=input('请输入一个年份：')
 while not year.isdigit():
-    temp = input("抱歉，您的输入有误，请输入一个整数：")
+    year = input("抱歉，您的输入有误，请输入一个整数：")
 year=int(year)    
 if  year%400==0:
     year=str(year)
@@ -130,3 +130,21 @@ while (temp < 10000):
            print(temp)
 
 作业007,008
+0.按照 100 分制，90 分以上成绩为 A，80 到 90 为 B，60 到 80 为 C，60 以下为 D，写一个程序，当用户输入分数，自动转换为ABCD 的形式打印。
+while 1:
+    grade=input('请输入成绩(1-100)：')
+    while not grade.isdigit():
+        grade=input('输入非法，请输入一个整数：')
+    grade=int(grade)
+    if (90<=grade<101):
+        print('成绩为A')
+    elif (80<=grade<=90):
+        print('成绩为B')
+    elif  (60<=grade<80):
+        print('成绩为C')
+    elif  (grade<=60):
+        print('成绩为D')
+    else:
+        print('输入的数值不在范围内！')
+        
+        

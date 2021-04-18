@@ -229,4 +229,7 @@ member.insert(9,88)
 print(member1)
 print(member)
 
-
+1. 利用 for 循环打印上边 member 列表中的每个内容
+ for each  in member:
+    print(each )
+    

@@ -262,3 +262,75 @@ list3=[name+':'+slogan[2:] for name in list2 for slogan in list1 if slogan[0]==n
 list3.sort
 for each in list3:
     print(each)
+number = '0123456789'
+zimu = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+fuhao = r'''~!@$%^&*()_=-/,.?<>;:[]{}|\#'''
+
+# 密码安全性检查代码
+#
+# 低级密码要求：
+#   1. 密码由单纯的数字或字母组成
+#   2. 密码长度小于等于8位
+#
+# 中级密码要求：
+#   1. 密码必须由数字、字母或特殊字符（仅限：~!@#$%^&*()_=-/,.?<>;:[]{}|\）任意两种组合
+#   2. 密码长度不能低于8位
+#
+# 高级密码要求：
+#   1. 密码必须由数字、字母及特殊字符（仅限：~!@#$%^&*()_=-/,.?<>;:[]{}|\）三种组合
+#   2. 密码只能由字母开头
+#   3. 密码长度不能低于16位
+
+code=input('请输入需要检查的密码组合：')
+
+length=len(code)
+
+while(' 'in code)or (length==0):
+    print('密码不能为空或含有空格！')
+    code=input('请重新输入需要检查的密码组合：')
+    
+    length=len(code)
+
+if 0<length<=8:
+    lg=1
+elif 8<length<=16:
+    lg=2
+else:
+    lg=3
+
+shului=0
+for each in code:
+    if each in number:
+        shului=shului+1
+        break
+    
+for each in code:
+    if each in zimu:
+        
+        shului=shului+1
+        break
+    
+for each in code:
+    if each in fuhao:
+        
+        shului=shului+1
+        break
+    
+while (1):
+
+    if (shului==3)and (lg == 3 )and(code[0] in zimu):
+        print('您的密码安全级别评定为：高\n请继续保持')
+        
+        break
+    else:
+        if (shului>=2)and (lg>=2):
+               print('您的密码安全级别评定为：中')
+        else :
+           print('您的密码安全级别评定为：低')
+    
+       
+    print('请按以下方式提升密码安全级别：')
+    print('1.密码必须由数字，字母及特殊字符三种组合')
+    print('2.密码只能由字母开头')
+    print('3.密码长度不低于16位')
+    break

@@ -254,3 +254,11 @@ for x in range(10):
             
                 list1.append((x,y))
 print(list1)            
+
+2.请使用列表推导式补充被小甲鱼不小心涂掉的部分
+list1=['1.Just do it','2.一切皆有可能','3.让编程改变世界','4.Impossible is Nothing']
+list2=['4.阿迪达斯','2.李宁','3.鱼c','1.耐克']
+list3=[name+':'+slogan[2:] for name in list2 for slogan in list1 if slogan[0]==name[0]]
+list3.sort
+for each in list3:
+    print(each)

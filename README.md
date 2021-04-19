@@ -385,3 +385,14 @@ for each in name:
         min1=each
 print(min1)
 
+2. 视频中我们说 sum() 这个BIF有个缺陷，就是如果参数里有字符串类型的话就会报错，请写出一个新的实现过程，自动“无视”参数里的字符串并返回正确的计算结果
+num='0123456789'
+sum1=0
+code=input('请输入一串数字：')
+for each in code:
+    if each not in num:
+       code.replace(each,'0')
+    else:   
+        each=int(each)    
+        sum1=sum1+each
+print(sum1)

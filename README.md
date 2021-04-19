@@ -374,3 +374,14 @@ for each in score:
     
 if IsFind == False:
     print('找不到！')
+
+1.猜想一下 min() 这个BIF的实现过程
+name =  input('请输入一串数字：')
+min1=name[0]
+
+#name = int (name)
+for each in name:
+    if each < min1 :
+        min1=each
+print(min1)
+

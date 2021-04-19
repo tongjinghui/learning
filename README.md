@@ -334,3 +334,29 @@ while (1):
     print('2.密码只能由字母开头')
     print('3.密码长度不低于16位')
     break
+
+作业015：
+
+0.编写一个进制转换程序
+while (1):
+    num=input('请输入一个整数(输入Q结束程序)：')
+    if num=='Q':
+        break
+    while ( num.isdigit() is False):
+        num=input('输入有误，请重新输入一个整数(输入Q结束程序)：')
+        if num=='Q':
+            break
+    if num=='Q':
+            break    
+    num=int(num)
+    x='%x' % num
+    o='%o' % num
+    d=bin(num)
+    num=str(num)
+    x=str(x)
+    o=str(o)
+    d=str(d)
+    print('十进制 -> 十六进制：'+ num +' -> 0x'+ x)
+    print('十进制 ->   八进制：'+ num +' -> 0o'+ o)
+    print('十进制 ->   二进制：'+ num +' -> '+ d)
+

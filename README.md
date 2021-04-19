@@ -360,3 +360,17 @@ while (1):
     print('十进制 ->   八进制：'+ num +' -> 0o'+ o)
     print('十进制 ->   二进制：'+ num +' -> '+ d)
 
+作业016：
+0.补全代码
+name =  input('请输入待查找的用户名：')
+score = [['迷途',85],['黑夜',80],['小布丁',65],['福娃',95],['怡景',90]]
+IsFind = False
+
+for each in score:
+    if name in each:
+        print(name+'的得分是：',each[1])
+        IsFind = True
+        break
+    
+if IsFind == False:
+    print('找不到！')

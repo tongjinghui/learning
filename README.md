@@ -402,3 +402,25 @@ print(sum1)
 
 def power(x,y):
     return print(x**y)
+
+1.求最大公约数
+def gcd1(x,y):
+    if x<=y:
+        a=x
+    else:
+        a=y
+    while (x%a!=0) or (y%a!=0):
+        a=a-1
+        
+    return print(a)
+
+
+def gcd2(x, y):
+    while y:
+        t = x % y
+        x = y
+        y = t
+ 
+    return x
+    
+print(gcd2(24, 36))

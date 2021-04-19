@@ -396,3 +396,9 @@ for each in code:
         each=int(each)    
         sum1=sum1+each
 print(sum1)
+
+作业017：
+0. 编写一个函数 power() 模拟内建函数 pow()，即 power(x, y) 为计算并返回 x 的 y 次幂的值。
+
+def power(x,y):
+    return print(x**y)

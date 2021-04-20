@@ -475,3 +475,66 @@ def fun1(*x):
       
 fun1('I love fishc.com.', 'I love you, you love me.')        
         
+作业020：
+0.请用已学过的知识编写程序，统计下边这个长字符串中各个字符出现的次数并找到小甲鱼送给大家的一句话。
+def fun(x):
+    a=0
+    b=0
+    c=0
+    d=0
+    e=0
+    f=0
+    g=0
+    h=0
+    i=0
+    j=0
+    k=0
+    l=0
+    n=0
+    o=0
+    p=0
+    q=0
+    r=0
+    othors=[]
+    for each in x:
+        if each=='!':
+            a+=1
+        elif each=='@':
+            b+=1
+        elif each=='#':
+            c+=1
+        elif each=='$':
+            d+=1
+        elif each=='%':
+            f+=1
+        elif each=='^':
+            g+=1
+        
+        elif each=='&':
+            h+=1
+        elif each=='*':
+            i+=1
+        elif each=='(':
+            j+=1
+        elif each==')':
+            k+=1
+        elif each=='_':
+            l+=1
+        elif each=='+':
+            n+=1
+        elif each=='{':
+            o+=1
+        elif each=='}':
+            p+=1
+        elif each=='[':
+            q+=1
+        elif each==']':
+            r+=1
+        elif each=='\n':
+            del each
+        else:
+            
+            othors.append(each)
+    print('!有 %d 个，@有 %d 个，#有 %d 个，$有 %d 个，%%有 %d 个，^ 有 %d 个， &有 %d 个，*有 %d 个' % (a,b,c,d,f,g,h,i))       
+    print('(有 %d 个，)有 %d 个，_有 %d 个，+有 %d 个, {有 %d 个，} 有 %d 个， [有 %d 个，]有 %d 个' % (j,k,l,n,o,p,q,r)) 
+    print(othors)

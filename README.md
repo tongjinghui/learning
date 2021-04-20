@@ -448,3 +448,30 @@ b=input('请输入子字符串（两个字符）：')
 
 findstr(a,b)
 
+作业019：
+1. 编写一个函数，分别统计出传入字符串参数（可能不只一个参数）的英文字母、空格、数字和其它字符的个数。
+def fun1(*x):
+    lg=len(x)
+    num='0123456789'
+    sp=' '
+    zimu='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+   
+    for each in range(lg):
+        czimu=0
+        cnum=0
+        csp=0
+        qita=0  
+        for i in x[each]:
+           
+            if i.isdigit():
+                cnum+=1
+            elif i==sp:
+                csp+=1
+            elif i.isalpha():
+                czimu+=1
+            else:
+                qita+=1
+        print('第',each+1,'个字符串共有：英文字母',czimu,'个，数字',cnum,'个，空格',csp,'个，其他字符',qita,'个')
+      
+fun1('I love fishc.com.', 'I love you, you love me.')        
+        

@@ -538,3 +538,24 @@ def fun(x):
     print('!有 %d 个，@有 %d 个，#有 %d 个，$有 %d 个，%%有 %d 个，^ 有 %d 个， &有 %d 个，*有 %d 个' % (a,b,c,d,f,g,h,i))       
     print('(有 %d 个，)有 %d 个，_有 %d 个，+有 %d 个, {有 %d 个，} 有 %d 个， [有 %d 个，]有 %d 个' % (j,k,l,n,o,p,q,r)) 
     print(othors)
+    
+1. 请用已学过的知识编写程序，找出小甲鱼藏在下边这个长字符串中的密码，密码的埋藏点符合以下规律：i=>|3KYD
+i=>|3KYD
+    a) 每位密码为单个小写字母
+    b) 每位密码的左右两边均有且只有三个大写字母
+
+str='''  文件 '''
+code=[]
+lg=len(string)
+al='abcdefghijklmnopqrstuvwxyz'
+AL='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+    
+for i in range(lg-1):
+        if string[i] in al:
+            
+            if (string[i-4]not in AL)and (string[i-3] in AL) and (string[i-2] in AL) and (string[i-1] in AL) and (string[i+1] in AL)and (string[i+2] in AL) and (string[i+3] in AL)and(string[i+4] not in AL):
+                code.append(string[i])
+    
+print(code)
+    

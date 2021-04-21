@@ -579,3 +579,14 @@ def fun(x):
         return result
         
 print(fun(5))
+
+1. 写一个函数get_digits(n)，将参数n分解出每个位的数字并按顺序存放到列表中。举例：get_digits(12345) ==> [1, 2, 3, 4, 5]
+def get_digits(n):
+    n=str(n)
+    result=[]
+    lg=len(n)
+    for i in range(lg):
+        result.append(n[i])
+    return result
+
+print(get_digits(12345))

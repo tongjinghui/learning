@@ -559,3 +559,12 @@ for i in range(lg-1):
     
 print(code)
     
+作业023;
+0.斐波那契数列：
+def fun(n):
+    if n>2:
+        return fun(n-1)+fun(n-2)
+    else:
+        return 1
+    
+print(fun(11))

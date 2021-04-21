@@ -568,3 +568,14 @@ def fun(n):
         return 1
     
 print(fun(11))
+
+1. 使用递归编写一个十进制转换为二进制的函数（要求采用“取2取余”的方式，结果与调用bin()一样返回字符串形式）。
+def fun(x):
+    result=''
+    if x:
+        result= fun(x//2)
+        return result+str(x%2)
+    else:
+        return result
+        
+print(fun(5))

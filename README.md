@@ -610,4 +610,68 @@ def age(x):
         return 10
     else:
         return age(x-1)+2
- 
+ 作业025：
+ 0. 尝试利用字典的特性编写一个通讯录程序吧
+dict1={'小鱼':88974651,'小糖糖':1234567,'小童童':88888888}
+
+print('|---欢迎进入通讯录程序---|')
+print('|---1:查询联系人资料  ---|')
+print('|---2:插入新的联系人  ---|')
+print('|---3:删除已有联系人  ---|')
+print('|---4:退出通讯录程序  ---|')
+print('\n')
+while 1:
+    a=input('请输入相关的指令代码：')
+    while a not in '1234':
+        print('输入错误！')
+        a=input('请重新输入相关的指令代码：')
+    
+
+    if a=='1':
+        b=input('请输入需要查询的联系人姓名：')
+        if b in dict1:
+            print('%s:' % b,dict1[b],'\n')
+        else:
+            print('所查询联系人不存在！')
+            d=input('是否录入新联系人（yes/ no）：')
+            if d=='yes':
+                y=input('请输入新用户联系电话：')
+                dict1[b]=y
+                print('录入成功！新联系人： %s:'% b,dict1[b])
+                print('\n')
+            else:
+                print('新联系人录入失败！')
+                print('\n')
+                
+    elif a=='2':
+        b=input('请输入新联系人姓名：')
+        if b in dict1:
+            print('您输入的姓名在通讯录中已存在 -->> %s:' % b,dict1[b])
+            c=input('是否修改联系人资料（yes\ no）：')
+            if c=='yes':
+                dict1[b]=input('请输入联系人的联系电话：')
+                print('修改成功！%s:'% b,dict1[b],'\n')
+            else:
+                print('用户资料修改失败！%s:'% b ,dict1[b],'\n')
+        else:        
+            y=input('请输入新联系人的联系电话：')
+            dict1[b]=y
+            print('录入成功！新联系人： %s:'% b,dict1[b])
+            print('\n')
+            
+    elif a=='3':
+        b=input('请输入需要删除的联系人姓名：')
+        if b in dict1:
+            print('联系人：%s:'% b,dict1[b],' 已被删除！')
+            del dict1[b]
+        else:
+            print('联系人不存在！')
+        print('\n')
+        
+    elif a=='4':
+        print('|--- 感谢使用通讯录程序 ---|')
+        break
+
+    else:
+        print('输入错误！')
+        

@@ -675,3 +675,53 @@ while 1:
     else:
         print('输入错误！')
         
+作业026：
+0. 尝试编写一个用户登录程序（这次尝试将功能封装成函数）
+dict1={'小童童':'12344321','小鱼':'123123'}
+
+while 1:
+    def fun1():
+        b=input('请输入用户名：')
+        while b in dict1:
+            b=input('此用户名已被占用，请重新输入：')
+            
+        c=input('请输入密码：')
+        print('注册成功，赶紧试试登录吧^_^\n')
+        dict1[b] = c
+
+
+    def fun2():
+        b=input('请输入用户名：')
+        while b not in dict1:
+            b=input('您输入的用户名不存在，请重新输入：')
+            
+        c=input('请输入密码：')
+        while c!=dict1[b]:
+            c=input('密码错误！请重新输入密码：')
+            if c=='q':
+                
+                break
+        if c==dict1[b]:    
+            print('欢迎进入王者荣耀！\n')
+
+        
+    def fun3():
+        print('感谢您的使用！\n')
+    print('|--- 新建用户：N/n ---|')
+    print('|--- 登录账号：E/e ---|')
+    print('|--- 退出程序：Q/q ---|')
+    a=input('|--- 请出入指令代码：')
+
+    if a=='N' or a=='n':
+        fun1()
+
+    elif a=='E' or a=='e':
+        fun2()
+        break
+    elif a=='Q' or a=='q':
+        fun3()
+        break
+
+    else:
+        print('输入错误！请重新输入！')
+

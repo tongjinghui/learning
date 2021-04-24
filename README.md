@@ -738,3 +738,28 @@ while 1:
         break
 f.close()
 
+1. 编写一个程序，比较用户输入的两个文件，如果不同，显示出所有不同处的行号与第一个不同字符的位置。
+name1=input('请输入第一个文件名：')
+name2=input('请输入第二个文件名：')
+f1=open(name1,'r')
+f2=open(name2,'r')
+
+count=0
+differ=[]
+
+for line1 in f1:
+    line2=f2.readline()
+    count+=1
+    if line1!=line2:
+        
+        differ.append(count)
+  
+
+f1.close()
+f2.close()
+if count==0:
+    print('两个文件完全一样')
+else:
+    print('两个文件共有%d个不同之处'% len(differ) )
+    for each in differ:
+        print('第%s行不同'% each)

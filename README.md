@@ -725,3 +725,16 @@ while 1:
     else:
         print('输入错误！请重新输入！')
 
+作业029：
+0.0. 编写一个程序，接受用户的输入并保存为新的文件。
+
+name=input('请输入文件名：')
+f=open(name,'w')
+print('请输入内容【单独输入;w保存退出】：')
+while 1:
+    a=input()
+    f.write('%s\n' % a)
+    if a==':w':
+        break
+f.close()
+

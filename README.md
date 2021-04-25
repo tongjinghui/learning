@@ -822,3 +822,30 @@ def fun1(name,line):
 a=input('请输入要打开的文件：')
 b=input('请输入需要显示的行数【格式如13:21 或 :21 或 21: 】')
 fun1(a,b)
+
+作业030：
+0.0. 编写一个程序，统计当前目录下每个文件类型的文件数，程序实现如图：
+import os
+
+
+list1=os.listdir(os.curdir )
+
+typed=dict()
+
+
+
+
+
+for each in list1:
+    if os.path.splitext(each)[1]=='':
+        typed.setdefault('文件夹',0)
+        typed['文件夹']+=1
+    else :
+        orther=os.path.splitext(each)[1]
+        typed.setdefault(orther,0)
+        typed[orther]+=1
+   
+for each in typed.keys():
+    
+    print('该文件夹下共有类型为【%s】的文件%d个' %(each,typed[each]) )
+

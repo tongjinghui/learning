@@ -763,3 +763,23 @@ else:
     print('两个文件共有%d个不同之处'% len(differ) )
     for each in differ:
         print('第%s行不同'% each)
+        
+2.2. 编写一个程序，当用户输入文件名和行数（N）后，将该文件的前N行内容打印到屏幕上，程序实现如图：
+def fun1(name,line):
+    
+    f=open(name,'r')
+    
+    print('文件'+name+'的前'+line+'的内容如下：')
+    print('\n文件%s的前%s的内容如下：\n'% (name , line))
+    count=0
+    line=int(line)
+    
+    for each in f:
+        if count<line:
+            print(each)
+            count+=1
+    f.close()
+
+a=input('请输入要打开的文件：')
+b=input('请输入需要显示该文件前几行：')
+fun1(a,b)

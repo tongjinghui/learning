@@ -783,3 +783,42 @@ def fun1(name,line):
 a=input('请输入要打开的文件：')
 b=input('请输入需要显示该文件前几行：')
 fun1(a,b)
+
+3. 呃，不得不说我们的用户变得越来越刁钻了。要求在上一题的基础上扩展，用户可以随意输入需要显示的行数。（如输入13:21打印第13行到第21行，输入:21打印前21行，输入21:则打印从第21行开始到文件结尾所有内容）
+def fun1(name,line):
+    f=open(name,'r')
+    (start,end)=line.split(':',1)
+    count=0
+    if start=='':
+      
+        print('文件'+name+'的前'+end+'的内容如下：')
+        print('\n文件%s的前%s的内容如下：\n'% (name , end))
+        for i in range(int(end)):
+            print(f.readline())
+    
+    
+    elif end=='':
+        print('文件%s从%s到末尾的内容如下：'%(name,start))
+        start=int(start)
+        for each in f:
+            count+=1
+            if count>=start:
+                print(each)
+            
+    else:
+        for each in f:
+            
+            count+=1
+            start=int(start)
+            end=int(end)
+            if start<=count<=end:
+                print(each)
+                
+    f.close()
+
+
+
+
+a=input('请输入要打开的文件：')
+b=input('请输入需要显示的行数【格式如13:21 或 :21 或 21: 】')
+fun1(a,b)

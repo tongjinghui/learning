@@ -849,3 +849,14 @@ for each in typed.keys():
     
     print('该文件夹下共有类型为【%s】的文件%d个' %(each,typed[each]) )
 
+作业033：
+2.尝试一个新的函数 int_input()，当用户输入整数的时候正常返回，否则提示出错并要求重新输入。
+while 1:
+        try:
+            a=int(input('请输入一个整数：'))
+            
+            break
+
+
+        except ValueError:
+            print('输入错误！')

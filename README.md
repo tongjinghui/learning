@@ -860,3 +860,27 @@ while 1:
 
         except ValueError:
             print('输入错误！')
+
+作业036：
+1. 按照以下提示尝试定义一个矩形类并生成类实例对象。
+  属性：长和宽版权属于：bbs.fishc.com
+方法：设置长和宽 -> setRect(self)，获得长和宽 -> getRect(self)，获得面积 -> getArea(self)=Y]zAj+Tb_
+提示：方法中对属性的引用形式需加上 self，如 self.width
+
+class Rectangle:
+    long=5.00
+    width=4.00
+
+    def setRect(self):
+        print('请输入矩形的长和宽')
+        self.long=float(input('长：'))
+        self.width=float(input('宽：'))
+
+
+    def getRect(self):
+       
+        print('这个矩形的长是：%f，宽是：%f' % (self.long,self.width))
+
+    def getArea(self):
+        area=self.long*self.width
+        print(area)
